@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema para checagem de nacionalidade.</h1>
+    Por favor, digite o pais em que você nasceu: <input type="text" name="txtpais" id="txtpais"> 
+    <input type = "button" onclick="nacionalidade()" value = "Confirmar">
+    <div id ="res">
+
+    </div>
+    <script>
+        function nacionalidade (){
+            var pais = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var p = pais.value
+            if (p == 'Brasil'){
+                res.innerHTML = `Você nasceu no Brasil, portanto você é brasileiro!`
+            } else {
+                res.innerHTML =`Você é de <strong>${p}</strong>, portanto você é estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
